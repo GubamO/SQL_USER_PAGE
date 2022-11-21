@@ -8,7 +8,8 @@ form.addEventListener("submit", ()=> {
         method: "POST",
         body: JSON.stringify(login),
         headers: {
-            "Content-Type": "application/json"        }
+            "Content-Type": "application/json"
+        }
     }).then(res => res.json())
         .then(data => {
             if (data.status == "error") {

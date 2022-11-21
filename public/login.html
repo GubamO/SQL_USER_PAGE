@@ -15,7 +15,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
+          <a class="navbar-brand" href="#">Login page</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
               aria-label="Toggle navigation">
@@ -30,16 +30,16 @@
                       <a class="nav-link active" aria-current="page" href="/register">Register</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="/login">Login</a>
+                      <a class="nav-link active" aria-current="page" href="./login.html">Login</a>
                   </li>
               </ul>
           </div>
       </div>
   </nav>
   <div class="container my-5">
-      <div class="card" style="width: 40rem;">
+      <div class="card" style="width: 100%;">
           <div class="card-body">
-              <form action="/auth/login" method="POST">
+              <form onsubmit="return false;" id="form">
                   <h4>Login</h4>
                   <div class="mb-3">
                       <label for="email" class="form-label">Email address</label>
@@ -50,10 +50,14 @@
                       <label for="password" class="form-label">Password</label>
                       <input type="password" class="form-control" id="password" name="password">
                   </div>
+                  <div class="alert alert-danger" role="alert" id="error" style="display: none;"></div>
+                  <div class="alert alert-success" role="alert" id="success" style="display: none;"></div>
                   <button type="submit" class="btn btn-primary">Login</button>
               </form>
           </div>
       </div>
   </div>
+
+  <script src="js/login.js"></script>
   </body>
 </html>
